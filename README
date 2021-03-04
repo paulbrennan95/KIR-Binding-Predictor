@@ -1,0 +1,17 @@
+KIR peptide predictor: input peptides and binding data into training csv file, and then predict binding of other peptides in PeptidePredict.csv.
+
+
+
+Reads training dataset 
+  - first column: single letter amino acids sequences
+  - second column: normalized binding data (0-1)
+  
+Converts ninemers into vector of numbers
+
+Classifies binding data into high, medium, and non-binders.
+
+Splits 80% of dataset to train the model, 20% to test it (train_split_test function of sklearn)
+
+Uses RandomForestClassifier model (default settings)
+
+Classifies prediction peptides from PredictPeptides.csv as high, medium, and non-binders
